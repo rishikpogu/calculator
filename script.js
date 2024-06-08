@@ -103,6 +103,7 @@ equalsButton.addEventListener('click', () => {
         num1 = ''
         num2 = ''
         operator = null
+        result = null
     }
 })
 

@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    background-color: black;
+    height: 640px;
+    width: 360px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    margin: 10px;
+    border: 1px dotted white;
+    border-radius: 16px;
+    height: 36%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+#upper {
+    font-size: small;
+    height: 20px;
+}
+
+#lower {
+    font-size: 1.8rem;
+    font-weight: bold;
+    height: 36px;
+}
+
+p{
+    margin: 0px 16px 16px 0px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+button {
+    border-radius: 50%;
+    /* flex-grow: 1; */
+    height: 80px;
+    width: 80px;
+    margin: 2px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: white;
+}
+
+#zero {
+    /* flex-grow: 2; */
+    width: 160px;
+    border-radius: 40px;
+}
+
+.yellow {
+    background-color: orange;
+}
+
+.ash {
+    background-color: #b2beb5;
+}
+
+.digit {
+    background-color: gray;
+}
+
+#ac, #sign, #percent {
+    color: black;
+}
