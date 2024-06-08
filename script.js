@@ -105,3 +105,14 @@ equalsButton.addEventListener('click', () => {
     }
 })
 
+signButton.addEventListener('click', () => {
+    if (lowerDisplay.textContent) {
+        lowerDisplay.textContent = String(-parseFloat(lowerDisplay.textContent))
+    }
+})
+
+percentButton.addEventListener('click', () => {
+    if (lowerDisplay.textContent) {
+        lowerDisplay.textContent = String(parseFloat(lowerDisplay.textContent) / 100)
+    }
+})
