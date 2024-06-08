@@ -66,6 +66,7 @@ numbers.forEach(button => {
             lowerDisplay.textContent = ''
             result = null
         }
+        if (lowerDisplay.textContent.includes('.') && button.textContent === '.') return
         lowerDisplay.textContent += button.textContent
     })
 })
