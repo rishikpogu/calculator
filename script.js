@@ -50,8 +50,8 @@ const equalsButton = document.querySelector('#equals');
 clearButton.addEventListener('click', () => {
     lowerDisplay.textContent = ''
     upperDisplay.textContent = ''
-    num1 = 0
-    num2 = 0
+    num1 = ''
+    num2 = ''
     operator  = null
 })
 
@@ -62,6 +62,10 @@ clearButton.addEventListener('click', () => {
 
 numbers.forEach(button => {
     button.addEventListener('click', () => {
+        if (result !== null) {
+            lowerDisplay.textContent = ''
+            result = null
+        }
         lowerDisplay.textContent += button.textContent
     })
 })
@@ -86,3 +90,17 @@ operators.forEach(button => {
         else upperDisplay.textContent = `${num1} ${operator}`
     })
 })
+
+equalsButton.addEventListener('click', () => {
+    num2 = lowerDisplay.textContent
+    result = operate(operator, num1, num2)
+    if (result == null) return
+    else {
+        lowerDisplay.textContent = result
+        upperDisplay.textContent = ''
+        num1 = ''
+        num2 = ''
+        operator = null
+    }
+})
+
